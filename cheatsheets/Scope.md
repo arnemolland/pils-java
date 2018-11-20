@@ -117,3 +117,4 @@ class Main {
 * En variabel definert på klasse-nivå kan bli brukt av alle metodene i klassen.
 * Når en metode har samme lokalvariabel som en klassevariabel, kan vi bruke `this` for å referere til klassevariabelen.
 * For at en variabel skal kunne bli brukt etter slutten av en løkke, må den bli deklareret før kodeblokken til løkken.
+

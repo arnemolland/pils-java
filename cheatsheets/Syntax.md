@@ -1,6 +1,6 @@
-# Syntax
+# Syntaks
 
-###### Grunnleggende syntax
+###### Grunnleggende syntaks
 
 * Java er _case sensitive_, som betyr at **Hello** og **hello** vil ha forskjellig betydning i Java.
 * **Klassenavn** - Alle klassenavn bør starte med stor bokstav. Hvis navnet består av flere ord, bør hver første bokstav i hvert ord være stor. **Eksempel**: `class EiLittaKlasse`
@@ -9,7 +9,7 @@
 
 
 
-###### Identifiers
+###### Identifikatorer
 
 Alle komponentene i Java krever navn. Navnene brukt til klasser, variabler og metoder blir kalt _identifiers_ eller _identifikatorer_ på norsk.
 

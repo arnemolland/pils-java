@@ -12,14 +12,15 @@
 For å deklarere en tabell kan vi følge den generelle formen som følger:
 
 ```java
-type navn[];
+T navn[];
 ELLER
-type[] navn;
+T[] navn;
+// Hvor T er datatypen, f.eks. int
 
 Eks.
     
 int intArr[];
-int[] intArr[];
+int[] intArr;
 ```
 
 
@@ -113,7 +114,6 @@ class Main {
         for(int i = 0; i < studArr.length; i++) {
             System.out.println(studArr[i].id + studArr[i].name);
         }
-        
     }
 }
 ```
