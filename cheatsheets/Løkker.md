@@ -1,6 +1,6 @@
 # Løkker
 
-En løkke er et sett med instruksjoner/funksjoner som blir kjørt om igjen mens en betingelse er sann. Java har 3 typer løkker som har samme grunnleggende funksjonalitet, men som er forskjellige i syntaks og hvor i løkken betingelsen blir sjekket.
+En løkke er et sett med instruksjoner/funksjoner som blir kjørt om igjen mens en betingelse er sann. Java har 3 typer løkker som har samme grunnleggende funksjonalitet, men som er forskjellige i syntaks og hvor i løkken betingelsen blir sjekket. Alle betingelser må være uttrykk som gir en _booleansk_ verdi. F.eks. `(10 < 7)` som blir _false_ eller `(10 != 0 && 10>5)` som blir _true_.
 
 
 
@@ -102,5 +102,47 @@ I dette tilfellet bil det være enklere og mer lesbart å bruke en _enchanced fo
 
 ### do-while-løkke
 
-En _do-while-løkke_ ligner på en _while-løkke_ hvor den eneste forskjellen er at _do-while-løkken_ sjekker betingelsen først etter
+En _do-while-løkke_ ligner på en _while-løkke_ hvor den eneste forskjellen er at _do-while-løkken_ sjekker betingelsen først etter koden i blokken blir utført en gang.
 
+Syntaks:
+
+```java
+do {
+    // Gjør noe
+}
+while(betingelse);
+```
+
+
+
+Her starter løkken med å først kjøre koden i blokken, før den evaluerer betingelsen. Hvis betingelsen evalueres til _true_, kjøres løkken en gang til. Hvis _false_ avsluttes løkken.
+
+
+
+### Lett å gjøre feil
+
+En av feilene man ofte kan gjøre når man implementerer en løkke, er å sette opp løkken slik at den kjøres uendelig, og at  programmet ikke kommer seg ut av løkken. Dette skjer når betingelsen er feil av en eller annen grunn.
+
+
+
+Vurder følgende kode:
+
+```java
+void loop() {
+    
+    // Her vil betingelsen (i != 0) aldri bli false.
+    for(int i = 5; i != 0; i -= 2) {
+        System.out.print(i);
+    }
+    
+    // Her oppdaterer vi ikke x i løkken.
+    int x = 1;
+    while(x == 1) {
+        System.out.print("Hjelp, jeg sitter fast!");
+    }
+}
+```
+
+
+
+Begge disse løkkene vil kjøre uendelig, da betingelsen aldri vil bli _false_. I det første tilfellet er dette grunnet en dårlig betingelse, og i andre tilfellet er det grunnet `x` aldri blir endret, slik at betingelsen alltid vil være _true_.
