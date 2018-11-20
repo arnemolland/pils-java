@@ -1,7 +1,5 @@
 package no.hvl.eksamen.v2018;
 
-import java.util.Arrays;
-
 class Reservasjon {
     private Rom rom;
     private Person person;
